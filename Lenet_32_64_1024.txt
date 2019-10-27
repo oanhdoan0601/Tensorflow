@@ -1,0 +1,159 @@
+learning_rate = 0.0001
+n_epoch = 1000
+batch_size = 52 
+
+weights = {
+    'wc1': tf.Variable(tf.random_normal([5, 5, 3, 32])),
+    'wc2': tf.Variable(tf.random_normal([5, 5, 32, 64])),
+    'wd1': tf.Variable(tf.random_normal([13*13*64, 1024])),
+    'out': tf.Variable(tf.random_normal([1024, n_classes]))
+}
+2087
+2073
+(4160, 50, 50, 3)
+(4160,)
+max_value -> 255
+*****   num_batches: 0.2625105381011963  *****
+NO OF BATCHES: 80
+*****   NO OF BATCHES: 0.2637145519256592  *****
+conv1.get_shape():  (?, 50, 50, 32)
+conv1.get_shape() after maxpool :  (?, 25, 25, 32)
+conv2.get_shape():  (?, 25, 25, 64)
+conv2.get_shape() after maxpool :  (?, 13, 13, 64)
+Epoch: 0, Loss: 8823.7979, Train_Acc: 0.7308, TEST_Acc: 0.5191, Time: 4.1430
+Epoch: 1, Loss: 9787.9326, Train_Acc: 0.7115, TEST_Acc: 0.5342, Time: 5.5006
+Epoch: 2, Loss: 9891.3945, Train_Acc: 0.7308, TEST_Acc: 0.5321, Time: 6.8665
+Epoch: 3, Loss: 9370.4561, Train_Acc: 0.7115, TEST_Acc: 0.5335, Time: 8.2213
+Epoch: 4, Loss: 9931.7920, Train_Acc: 0.7308, TEST_Acc: 0.5508, Time: 9.5781
+Epoch: 5, Loss: 8297.9395, Train_Acc: 0.7308, TEST_Acc: 0.5227, Time: 10.9398
+Epoch: 6, Loss: 7871.3389, Train_Acc: 0.7308, TEST_Acc: 0.5177, Time: 12.2934
+Epoch: 7, Loss: 8027.6753, Train_Acc: 0.7885, TEST_Acc: 0.5076, Time: 13.6477
+Epoch: 8, Loss: 7582.2466, Train_Acc: 0.7308, TEST_Acc: 0.5263, Time: 15.0100
+Epoch: 9, Loss: 7262.4043, Train_Acc: 0.7500, TEST_Acc: 0.5068, Time: 16.3674
+Epoch: 10, Loss: 7226.8120, Train_Acc: 0.7500, TEST_Acc: 0.5076, Time: 17.7206
+Epoch: 11, Loss: 6645.3311, Train_Acc: 0.7692, TEST_Acc: 0.5090, Time: 19.0759
+Epoch: 12, Loss: 6142.3091, Train_Acc: 0.7692, TEST_Acc: 0.5068, Time: 20.4313
+Epoch: 13, Loss: 5778.1870, Train_Acc: 0.8077, TEST_Acc: 0.5054, Time: 21.7882
+Epoch: 14, Loss: 5654.6221, Train_Acc: 0.7115, TEST_Acc: 0.5097, Time: 23.1459
+Epoch: 15, Loss: 5153.1279, Train_Acc: 0.7692, TEST_Acc: 0.5061, Time: 24.5062
+Epoch: 16, Loss: 4801.7529, Train_Acc: 0.8077, TEST_Acc: 0.5068, Time: 25.8597
+Epoch: 17, Loss: 4693.9858, Train_Acc: 0.8077, TEST_Acc: 0.5054, Time: 27.2204
+Epoch: 18, Loss: 4227.0337, Train_Acc: 0.7692, TEST_Acc: 0.5076, Time: 28.5884
+Epoch: 19, Loss: 3979.0198, Train_Acc: 0.7692, TEST_Acc: 0.5047, Time: 29.9545
+Epoch: 20, Loss: 4077.1045, Train_Acc: 0.7692, TEST_Acc: 0.5025, Time: 31.3187
+Epoch: 21, Loss: 3776.2495, Train_Acc: 0.7885, TEST_Acc: 0.5004, Time: 32.6803
+Epoch: 22, Loss: 3292.0405, Train_Acc: 0.7692, TEST_Acc: 0.5011, Time: 34.0360
+Epoch: 23, Loss: 3307.4978, Train_Acc: 0.7692, TEST_Acc: 0.5032, Time: 35.3933
+Epoch: 24, Loss: 3154.5173, Train_Acc: 0.7308, TEST_Acc: 0.5025, Time: 36.7591
+Epoch: 25, Loss: 2898.9988, Train_Acc: 0.7692, TEST_Acc: 0.5004, Time: 38.1096
+Epoch: 26, Loss: 2866.3481, Train_Acc: 0.7500, TEST_Acc: 0.5011, Time: 39.4680
+Epoch: 27, Loss: 2432.5129, Train_Acc: 0.7692, TEST_Acc: 0.4996, Time: 40.8279
+Epoch: 28, Loss: 2428.0759, Train_Acc: 0.7692, TEST_Acc: 0.5004, Time: 42.1794
+Epoch: 29, Loss: 2343.5935, Train_Acc: 0.7885, TEST_Acc: 0.5018, Time: 43.5360
+Epoch: 30, Loss: 2229.6033, Train_Acc: 0.7692, TEST_Acc: 0.5011, Time: 44.9013
+Epoch: 31, Loss: 1931.9491, Train_Acc: 0.8269, TEST_Acc: 0.4996, Time: 46.2584
+Epoch: 32, Loss: 1803.2467, Train_Acc: 0.8077, TEST_Acc: 0.4996, Time: 47.6227
+Epoch: 33, Loss: 1912.3259, Train_Acc: 0.8077, TEST_Acc: 0.5004, Time: 48.9895
+Epoch: 34, Loss: 1742.2830, Train_Acc: 0.7692, TEST_Acc: 0.4996, Time: 50.3416
+Epoch: 35, Loss: 1842.6523, Train_Acc: 0.7692, TEST_Acc: 0.4996, Time: 51.7016
+Epoch: 36, Loss: 1757.5887, Train_Acc: 0.7885, TEST_Acc: 0.4996, Time: 53.0602
+Epoch: 37, Loss: 1554.7115, Train_Acc: 0.7692, TEST_Acc: 0.4996, Time: 54.4149
+Epoch: 38, Loss: 1377.7443, Train_Acc: 0.8077, TEST_Acc: 0.5004, Time: 55.7765
+Epoch: 39, Loss: 1234.2925, Train_Acc: 0.7885, TEST_Acc: 0.4996, Time: 57.1360
+Epoch: 40, Loss: 1171.1274, Train_Acc: 0.8462, TEST_Acc: 0.4996, Time: 58.5023
+Epoch: 41, Loss: 1266.5001, Train_Acc: 0.8654, TEST_Acc: 0.4996, Time: 59.8700
+Epoch: 42, Loss: 1172.4368, Train_Acc: 0.8654, TEST_Acc: 0.4996, Time: 61.2323
+Epoch: 43, Loss: 1091.5730, Train_Acc: 0.8462, TEST_Acc: 0.4996, Time: 62.5931
+Epoch: 44, Loss: 1060.9080, Train_Acc: 0.8269, TEST_Acc: 0.4996, Time: 63.9469
+Epoch: 45, Loss: 976.6712, Train_Acc: 0.8269, TEST_Acc: 0.4989, Time: 65.3023
+Epoch: 46, Loss: 874.7559, Train_Acc: 0.8462, TEST_Acc: 0.4989, Time: 66.6750
+Epoch: 47, Loss: 1036.4529, Train_Acc: 0.8462, TEST_Acc: 0.4996, Time: 68.0290
+Epoch: 48, Loss: 893.7300, Train_Acc: 0.8269, TEST_Acc: 0.4989, Time: 69.3819
+Epoch: 49, Loss: 1059.2998, Train_Acc: 0.8269, TEST_Acc: 0.4996, Time: 70.7444
+Epoch: 50, Loss: 990.5945, Train_Acc: 0.8269, TEST_Acc: 0.4996, Time: 72.1013
+Epoch: 51, Loss: 937.7462, Train_Acc: 0.8462, TEST_Acc: 0.5004, Time: 73.4618
+Epoch: 52, Loss: 863.8051, Train_Acc: 0.8269, TEST_Acc: 0.5004, Time: 74.8244
+Epoch: 53, Loss: 879.9089, Train_Acc: 0.8462, TEST_Acc: 0.4996, Time: 76.1886
+Epoch: 54, Loss: 868.3627, Train_Acc: 0.8269, TEST_Acc: 0.4996, Time: 77.5487
+Epoch: 55, Loss: 898.8497, Train_Acc: 0.8269, TEST_Acc: 0.4996, Time: 78.9077
+Epoch: 56, Loss: 789.8313, Train_Acc: 0.8269, TEST_Acc: 0.5004, Time: 80.2668
+Epoch: 57, Loss: 842.4262, Train_Acc: 0.8077, TEST_Acc: 0.5004, Time: 81.6256
+Epoch: 58, Loss: 812.1050, Train_Acc: 0.8269, TEST_Acc: 0.5004, Time: 82.9930
+Epoch: 59, Loss: 723.7120, Train_Acc: 0.8269, TEST_Acc: 0.5004, Time: 84.3513
+Epoch: 60, Loss: 718.7137, Train_Acc: 0.7885, TEST_Acc: 0.5004, Time: 85.7055
+Epoch: 61, Loss: 632.6172, Train_Acc: 0.7692, TEST_Acc: 0.5004, Time: 87.0710
+Epoch: 62, Loss: 530.6637, Train_Acc: 0.7692, TEST_Acc: 0.5004, Time: 88.4315
+Epoch: 63, Loss: 564.0181, Train_Acc: 0.7500, TEST_Acc: 0.5011, Time: 89.7974
+Epoch: 64, Loss: 504.6904, Train_Acc: 0.8077, TEST_Acc: 0.4996, Time: 91.1575
+Epoch: 65, Loss: 469.0618, Train_Acc: 0.7885, TEST_Acc: 0.4989, Time: 92.5217
+Epoch: 66, Loss: 479.7531, Train_Acc: 0.7692, TEST_Acc: 0.5025, Time: 93.8891
+Epoch: 67, Loss: 305.6609, Train_Acc: 0.8077, TEST_Acc: 0.5004, Time: 95.2396
+Epoch: 68, Loss: 300.3459, Train_Acc: 0.8077, TEST_Acc: 0.5011, Time: 96.5948
+Epoch: 69, Loss: 372.2023, Train_Acc: 0.8077, TEST_Acc: 0.5018, Time: 97.9496
+Epoch: 70, Loss: 360.9985, Train_Acc: 0.7885, TEST_Acc: 0.5004, Time: 99.3091
+Epoch: 71, Loss: 360.5738, Train_Acc: 0.8654, TEST_Acc: 0.4996, Time: 100.6651
+Epoch: 72, Loss: 346.6015, Train_Acc: 0.8077, TEST_Acc: 0.5004, Time: 102.0252
+Epoch: 73, Loss: 340.6759, Train_Acc: 0.8462, TEST_Acc: 0.4996, Time: 103.3856
+Epoch: 74, Loss: 361.4435, Train_Acc: 0.8462, TEST_Acc: 0.5011, Time: 104.7505
+Epoch: 75, Loss: 300.4766, Train_Acc: 0.8269, TEST_Acc: 0.4996, Time: 106.1137
+Epoch: 76, Loss: 315.4264, Train_Acc: 0.8462, TEST_Acc: 0.5011, Time: 107.4750
+Epoch: 77, Loss: 259.1883, Train_Acc: 0.8654, TEST_Acc: 0.5011, Time: 108.8373
+Epoch: 78, Loss: 277.6245, Train_Acc: 0.8654, TEST_Acc: 0.5004, Time: 110.1950
+Epoch: 79, Loss: 269.3350, Train_Acc: 0.8462, TEST_Acc: 0.5004, Time: 111.5534
+Epoch: 80, Loss: 357.5370, Train_Acc: 0.8462, TEST_Acc: 0.5011, Time: 112.9060
+Epoch: 81, Loss: 323.0394, Train_Acc: 0.8462, TEST_Acc: 0.5004, Time: 114.2623
+Epoch: 82, Loss: 250.2716, Train_Acc: 0.8654, TEST_Acc: 0.5032, Time: 115.6224
+Epoch: 83, Loss: 312.8670, Train_Acc: 0.8462, TEST_Acc: 0.5011, Time: 116.9809
+Epoch: 84, Loss: 293.1055, Train_Acc: 0.8462, TEST_Acc: 0.5018, Time: 118.3393
+Epoch: 85, Loss: 290.1146, Train_Acc: 0.8077, TEST_Acc: 0.5004, Time: 119.7012
+Epoch: 86, Loss: 231.4784, Train_Acc: 0.8077, TEST_Acc: 0.5018, Time: 121.0716
+Epoch: 87, Loss: 205.2788, Train_Acc: 0.8846, TEST_Acc: 0.5011, Time: 122.4395
+Epoch: 88, Loss: 219.3186, Train_Acc: 0.8654, TEST_Acc: 0.5047, Time: 123.7972
+Epoch: 89, Loss: 263.2300, Train_Acc: 0.8462, TEST_Acc: 0.5040, Time: 125.1515
+Epoch: 90, Loss: 207.7921, Train_Acc: 0.8077, TEST_Acc: 0.5068, Time: 126.5055
+Epoch: 91, Loss: 215.2067, Train_Acc: 0.8462, TEST_Acc: 0.5032, Time: 127.8613
+Epoch: 92, Loss: 203.4147, Train_Acc: 0.8462, TEST_Acc: 0.5018, Time: 129.2144
+Epoch: 93, Loss: 203.0504, Train_Acc: 0.8462, TEST_Acc: 0.5011, Time: 130.5723
+Epoch: 94, Loss: 150.9238, Train_Acc: 0.8462, TEST_Acc: 0.5025, Time: 131.9256
+Epoch: 95, Loss: 133.8808, Train_Acc: 0.8462, TEST_Acc: 0.5061, Time: 133.2856
+Epoch: 96, Loss: 127.0486, Train_Acc: 0.8654, TEST_Acc: 0.5054, Time: 134.6394
+Epoch: 97, Loss: 168.3890, Train_Acc: 0.8654, TEST_Acc: 0.5032, Time: 135.9974
+Epoch: 98, Loss: 180.3876, Train_Acc: 0.8654, TEST_Acc: 0.5061, Time: 137.3561
+Epoch: 99, Loss: 193.9294, Train_Acc: 0.8846, TEST_Acc: 0.5047, Time: 138.7171
+Epoch: 100, Loss: 179.8335, Train_Acc: 0.8846, TEST_Acc: 0.5061, Time: 140.0813
+Epoch: 101, Loss: 174.3782, Train_Acc: 0.8654, TEST_Acc: 0.5032, Time: 141.4466
+Epoch: 102, Loss: 159.8579, Train_Acc: 0.8269, TEST_Acc: 0.5032, Time: 142.8066
+Epoch: 103, Loss: 148.2079, Train_Acc: 0.8654, TEST_Acc: 0.5032, Time: 144.1615
+Epoch: 104, Loss: 139.6834, Train_Acc: 0.8846, TEST_Acc: 0.5032, Time: 145.5203
+Epoch: 105, Loss: 137.8641, Train_Acc: 0.8269, TEST_Acc: 0.5040, Time: 146.8748
+Epoch: 106, Loss: 156.8429, Train_Acc: 0.8462, TEST_Acc: 0.5054, Time: 148.2306
+Epoch: 107, Loss: 132.8761, Train_Acc: 0.8654, TEST_Acc: 0.5047, Time: 149.5880
+Epoch: 108, Loss: 161.9076, Train_Acc: 0.8462, TEST_Acc: 0.5047, Time: 150.9615
+Epoch: 109, Loss: 129.0327, Train_Acc: 0.8654, TEST_Acc: 0.5040, Time: 152.3237
+Epoch: 110, Loss: 115.0444, Train_Acc: 0.8269, TEST_Acc: 0.5054, Time: 153.6851
+Epoch: 111, Loss: 96.5551, Train_Acc: 0.8462, TEST_Acc: 0.5054, Time: 155.0387
+Epoch: 112, Loss: 65.4089, Train_Acc: 0.8269, TEST_Acc: 0.5054, Time: 156.3993
+Epoch: 113, Loss: 71.7660, Train_Acc: 0.8269, TEST_Acc: 0.5040, Time: 157.7498
+Epoch: 114, Loss: 82.2174, Train_Acc: 0.8654, TEST_Acc: 0.5076, Time: 159.1061
+Epoch: 115, Loss: 92.6682, Train_Acc: 0.8654, TEST_Acc: 0.5083, Time: 160.4643
+Epoch: 116, Loss: 59.7334, Train_Acc: 0.8654, TEST_Acc: 0.5083, Time: 161.8242
+Epoch: 117, Loss: 75.4041, Train_Acc: 0.9038, TEST_Acc: 0.5083, Time: 163.1805
+Epoch: 118, Loss: 42.3107, Train_Acc: 0.8846, TEST_Acc: 0.5061, Time: 164.5388
+Epoch: 119, Loss: 66.2402, Train_Acc: 0.7885, TEST_Acc: 0.5090, Time: 165.8947
+Epoch: 120, Loss: 43.6357, Train_Acc: 0.8846, TEST_Acc: 0.5068, Time: 167.2544
+Epoch: 121, Loss: 43.7011, Train_Acc: 0.8654, TEST_Acc: 0.5047, Time: 168.6251
+Epoch: 122, Loss: 38.8601, Train_Acc: 0.8654, TEST_Acc: 0.5068, Time: 169.9870
+Epoch: 123, Loss: 52.8811, Train_Acc: 0.9038, TEST_Acc: 0.5068, Time: 171.3499
+Epoch: 124, Loss: 44.3237, Train_Acc: 0.8846, TEST_Acc: 0.5083, Time: 172.7088
+Epoch: 125, Loss: 43.4110, Train_Acc: 0.8654, TEST_Acc: 0.5054, Time: 174.0604
+Epoch: 126, Loss: 48.4911, Train_Acc: 0.9038, TEST_Acc: 0.5061, Time: 175.4199
+Epoch: 127, Loss: 18.3511, Train_Acc: 0.9231, TEST_Acc: 0.5097, Time: 176.7794
+Epoch: 128, Loss: 10.4762, Train_Acc: 0.9038, TEST_Acc: 0.5040, Time: 178.1409
+Epoch: 129, Loss: 23.3887, Train_Acc: 0.9038, TEST_Acc: 0.5105, Time: 179.4982
+Epoch: 130, Loss: 23.7542, Train_Acc: 0.9231, TEST_Acc: 0.5090, Time: 180.8634
+Epoch: 131, Loss: 10.0524, Train_Acc: 0.9423, TEST_Acc: 0.5068, Time: 182.2245
+Epoch: 132, Loss: 6.6623, Train_Acc: 0.9423, TEST_Acc: 0.5076, Time: 183.5872
+Epoch: 133, Loss: 24.0686, Train_Acc: 0.9038, TEST_Acc: 0.5068, Time: 184.9504
+Epoch: 134, Loss: 2.0707, Train_Acc: 0.9808, TEST_Acc: 0.5097, Time: 186.3149
+                  Testing accuracy: 0.5097, Time: 186.4121
+*****   END: 186.44619464874268  *****
